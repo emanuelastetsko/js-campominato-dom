@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 const grid = document.getElementById("grid");
+let risultato = document.getElementById("result");
+
 
 // All'apertura della pagina non si visualizza nesssuna tabella 
 container.style.display = "none";
@@ -11,11 +13,15 @@ function generaTabella() {
 
     let bombe= [];
     let partitaInCorso= true;
+    let punteggio = 0; 
  
-    
+    // Ciclo while per generazione bombe
     while(bombe.length < 16){
+
         let numeroRandom = Math.floor(Math.random() * 100) + 1;
+
         if(!bombe.includes(numeroRandom)){
+            
             bombe.push(numeroRandom);
         }
     }
@@ -47,11 +53,13 @@ function generaTabella() {
                         console.log("Hai perso");
                         partitaInCorso=false;
                         cell.classList.add("red");
+                        risultato.innerHTML = ("Il tuo punteggio è " + punteggio);
                         
                     }
                     else{
                        
                         cell.classList.add("blue");
+                        punteggio++;
 
                     }
                 }
@@ -68,21 +76,19 @@ function svuotaTabella() {
     console.log("La tabella è stata svuotata");
 }
 
-
-
 const myButton = document.getElementById("play");
 
 // Al click deve apparire la griglia (precedentemente nascosta) con tutte le sue celle
 myButton.addEventListener("click",
 
   function () {
+
     svuotaTabella();
     generaTabella();
     
-      
+    risultato.innerHTML = "";
     container.style.display = "inline";
     console.log("Il gioco è iniziato");
     
   }
-
 );

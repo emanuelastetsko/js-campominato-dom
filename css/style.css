@@ -71,6 +71,11 @@ main .square{
     background-color: rgb(167, 76, 76);
 }
 
+#result{
+    padding-top: 15px;
+    text-align: center;
+}
+
 /* FOOTER */
 footer{
     width: 70vw;
