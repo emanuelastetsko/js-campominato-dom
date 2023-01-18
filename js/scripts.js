@@ -47,7 +47,7 @@ function generaTabella() {
 
                 console.log("Hai cliccato la cella n." + index);
                 
-                if((!cell.classList.contains("red") || !cell.classList.contains("red")) && partitaInCorso){
+                if((!cell.classList.contains("red") || !cell.classList.contains("blue")) && partitaInCorso){
                     if(bombe.includes(index)){
 
                         console.log("Hai perso");
