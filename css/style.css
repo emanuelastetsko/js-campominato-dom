@@ -47,7 +47,7 @@ main{
 }
 
 main #grid{
-    height: 80vh;
+    height: 70vh;
     width: 50vw;
     border: 1px solid black;
     display: flex;
@@ -58,10 +58,17 @@ main .square{
     height: calc(100% / 10);
     width: calc(100% / 10);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.click{
-    background-color: darksalmon
+.blue{
+    background-color: rgb(82, 82, 173);
+}
+
+.red{
+    background-color: rgb(167, 76, 76);
 }
 
 /* FOOTER */
